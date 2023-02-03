@@ -50,13 +50,14 @@ header{
     top:100%;
     left: 5%;
     gap: 60px;
+    z-index: 1;
     
 }
 
 
 
 /*contiene:imgHockey_1,sectionIndex,navbar,upcomingTitles,eventList,dt*/
-.mainIndex{
+main{
     display:flex;
     flex-direction:column;
     flex-wrap:wrap;
@@ -74,7 +75,7 @@ header{
 }
 
 /*main*/
-.upcomingTitle{
+section > h2{
     background-color:black;
     color:aliceblue;
     text-align:center;
@@ -85,13 +86,34 @@ header{
 
 /*main*/
 .eventList{
-    margin-left:20%;
+    margin-left:15%;
+    left:2%;
     position:absolute;
     padding-left:10%;
-    top: -4%;
+    top: -2.5%;
 }
 
 /*main*/
 dt{
     margin-top:30px;
+}
+
+section > dl{
+    margin-left: 15%;
+    margin-right: 230px;
+    text-align:left"
+}
+dl > dt{
+    font-weight:700;
+    margin-top:20px;
+}
+dl > dd{
+    margin-left:15px;
+    text-indent:15px
+}
+
+.aboutContent{
+    position:absolute;
+    top:-2.5%;
+    padding-left:10%;
 }
