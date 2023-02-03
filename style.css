@@ -125,3 +125,19 @@ dl > dd{
 .contactSection>p{
     margin-bottom:10%;   
 }
+table{
+    position:absolute;
+    left:36%;
+    border-spacing:20px;
+    
+}
+
+.tableDetails{
+    position:absolute;
+    top:80%;
+    left:20%;
+}
+article{
+    position:absolute;
+    left:20%;
+}
