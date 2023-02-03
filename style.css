@@ -142,6 +142,17 @@ article{
     left:20%;
 }
 
+div>img{
+    width:250px;
+    height:250px;
+}
+.imgDiv{
+    position: absolute;
+    left:20%;
+    top:50%;
+
+}
+
 
 /*prueba de boton*/
 .button {
