@@ -86,7 +86,7 @@ section > h2{
 
 /*main*/
 .eventList{
-    margin-left:15%;
+    margin-left:13%;
     left:2%;
     position:absolute;
     padding-left:10%;
@@ -116,4 +116,12 @@ dl > dd{
     position:absolute;
     top:-2.5%;
     padding-left:10%;
+}
+
+.contactSection{
+    position:absolute;
+    left:25%;
+}
+.contactSection>p{
+    margin-bottom:10%;   
 }
