@@ -178,6 +178,7 @@ label{
     border-width:1px;
     margin-left:10%;
     align-items:center;
+    margin:1rem;
     
     
 }
@@ -213,6 +214,8 @@ label{
 
 .cardsRow{
     display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
 }
 
 
@@ -263,13 +266,13 @@ label{
 /* ## stat table start            ## */
 /* ##                             ## */
 
-.statTable{
-    display:flex;
-    
-    margin:1rem;
-    padding: 2rem;
-    border:solid 1px;
-    width:80%;
+table,tr,td{
+
+    margin:2rem;
+
+    border:solid 2px;
+
+    width:95rem;
 
     
 
