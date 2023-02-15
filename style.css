@@ -1,9 +1,17 @@
+/*general style normalization start*/
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
+/*general style normalization end*/
 
+
+/* ##                      ## /*
+/* ## navbar styling start ## */
+/* ##                      ## /*
+
+/*navbar: 12 column container for links (includes logo)*/
 .navLinksContainerColumn{
     display:flex;
     align-content:center;
@@ -17,6 +25,7 @@
     padding-left:1rem;
     }
 
+/*navbar:anchors*/    
 a{
     
     text-decoration:none;
@@ -24,14 +33,57 @@ a{
     background:white;
     padding:10px;
     margin:10px;
+    margin-top:15px;
     border-style:solid;
     border-width:2px;
     border-color:black;
 }
+/*navbar:links excluding logo*/
+.navLink{
+    padding-top:15px;
 
+}
+/*navbar:invisible spacer grow(container second child)*/
 .navLinksContainerColumn>:nth-child(2){
     flex-grow:1;
     background:none;
     border-style:none;
 }
+/*navbar:logo sizing*/
+.logoNavbar{
+    width:10rem;
+}
+/*navbar:logo container border removal*/
+.anchorLogoContainer{
+    border:none;
+}
+
+.navTitlesAndControlsContainerColumn{
+    display:flex;
+    justify-content:space-between;
+    align-content:center;
+    height: 10rem;
+    background:rgb(201, 201, 201);
+
+}
+.navButton{
+    width:150px;
+    height:150px;
+}
+
+.navDivBarbutton>a{
+    border-style:none;
+    background:none;
+}
+
+div>h1{
+    margin-top:3rem;
+}
+
+/* ##                    ## /*
+/* ## navbar styling end ## */
+/* ##                    ## /*
+
+
+
 
