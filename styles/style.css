@@ -80,10 +80,42 @@ div>h1{
     margin-top:3rem;
 }
 
-/* ##                    ## /*
+/* ##                    ## */
 /* ## navbar styling end ## */
-/* ##                    ## /*
+/* ##                    ## */
+
+/* ##                      ## */
+/* ## footer styling start ## */
+/* ##                      ## */
+
+footer{
+    display:flex;
+    height:3rem;
+    background:rgb(201, 201, 201);
+    flex-direction:row;
+    justify-content:space-between;
+}
 
 
+.footerLogo{
+    height:2rem;
+    background:none;
+    border-style:none;
+}
 
+div>a{
+    background:rgb(201, 201, 201);
+    border-style:none;
+}
+.cohortName{
+    margin-right:2%;
+}
+
+.socialLinks{
+    margin-left:2%;
+}
+
+/* ##                      ## */
+/* ## footer styling end   ## */
+/* ##                      ## */
 
