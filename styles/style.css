@@ -262,10 +262,7 @@ label{
 /* ##                             ## */
 /* ## stat table start            ## */
 /* ##                             ## */
-main{
-    display:flex;
-    justify-content:center;
-}
+
 .statTable{
     display:flex;
     
