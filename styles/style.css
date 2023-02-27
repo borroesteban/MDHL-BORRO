@@ -238,6 +238,7 @@ h3{
     flex-wrap:wrap;
     align-items:center;
     justify-content:center;
+    
 }
 
 .productCards{
@@ -246,12 +247,14 @@ h3{
     flex-wrap:wrap;
     align-items:center;
     justify-content:center;
+    
 }
 .card{
     margin:.5rem;
     height:25rem;
-    width:15rem;
+    width:16rem;
     transition:transform .2s linear;
+    
 }
 .card:hover{
     transform:scale(1.1,1.1)
