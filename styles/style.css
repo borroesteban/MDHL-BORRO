@@ -178,6 +178,7 @@ h3{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
 }
 
 .checkFilter{
@@ -193,18 +194,21 @@ h3{
 
 .generatedCheckBox{
     display: flex;
-    padding-right: 3rem;
-    padding-left: 3rem;
+    width:10rem;
     align-items: center;
+    align-content:center;
     justify-items:center;
     justify-content: center;
-    align-content:center;
     flex-wrap: nowrap;
+    text-align:center;
+    
 }
 
 .form-check-input{
     margin-right:1rem;
     margin-left:1rem;
+    min-width: 1rem;
+    max-width: 1rem;
     box-shadow: 3px 3px 4px 1px rgba(0,0,0,0.5);
 }
 
