@@ -184,10 +184,22 @@ h3{
     display: flex;
     padding-right: 3rem;
     padding-left: 3rem;
-    align-items: flex-start;
+    align-items: center;
+    justify-items:center;
     justify-content: center;
+    align-content:center;
     flex-wrap: nowrap;
-    
+}
+
+.generatedCheckBox{
+    display: flex;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    align-items: center;
+    justify-items:center;
+    justify-content: center;
+    align-content:center;
+    flex-wrap: nowrap;
 }
 
 .form-check-input{

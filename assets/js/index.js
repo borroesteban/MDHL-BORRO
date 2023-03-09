@@ -1,5 +1,18 @@
 import data from './data.js'
 
+
+
+
+
+const categories = data.events.map((product) => product.category);
+const uniqueCategories = categories.reduce((acc, category) => {
+  if (!acc.includes(category)) {
+    acc.push(category);
+  }
+  return acc;
+}, []);
+
+
 let checkBox = document.getElementById("generatedCheckBox");
 const checkBoxfragment = document.createDocumentFragment();
 function buildCheckBox(checkBoxArray, container) {
@@ -7,13 +20,13 @@ function buildCheckBox(checkBoxArray, container) {
         let div = document.createElement("div")
         div.className = "generatedCheckBox"
         div.innerHTML += `<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                          <label for="category">${newCheckBox.category}</label><br>`
+                          <label for="category">${newCheckBox}</label><br>`
     checkBoxfragment.appendChild(div);
     }
     container.appendChild(checkBoxfragment);
 }
 
-buildCheckBox(data.events, checkBox)
+buildCheckBox(uniqueCategories, checkBox)
 
 
 let eventCard = document.getElementById("cardContainer");
