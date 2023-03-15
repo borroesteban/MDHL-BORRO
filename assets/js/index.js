@@ -39,7 +39,7 @@ function buildCard(eventsArray, container) {
         <h5 class="card-title">${newCard.name}</h5>
         <p class="card-text">${newCard.category}</p>
         <p>${"price: $" + newCard.price}</p>
-        <a href="#" class="btn btn-primary">Show Details</a>
+        <a href="./pages/details.html?id=${newCard._id}" class="btn btn-primary">Show Details</a>
     </div>`
     fragment.appendChild(div);
     }
