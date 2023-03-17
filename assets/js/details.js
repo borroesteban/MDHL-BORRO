@@ -13,30 +13,30 @@ console.log(cardDetail)
 
 function createDetail (cardDetail, container){
     let div = document.createElement('div')
-    div.classList = 'card-big d-flex bg-Light gap-2 rounded p-3'
-    div.style = 'width: 90%; height 90%;'
+    div.classList = 'card-big d-flex'
     div.innerHTML = 
     `
-    <div class="container">
-    <div class="row">
-
-            <div class="col-12">
-                <img class = 'bg-light object-fit-contain p-3' src="${cardDetail.image}" alt="event image"
+    <div class="container detailRow">
+        <div class="row">
+            <div class="col-lg-8 detailCol">
+                <div>
+                    <img class ="detailIMG" src="${cardDetail.image}" alt="event image">
+                </div>
             </div>
-            <div class="col">
-                <h1>${cardDetail.name}</h1>
-            </div>
-            
-            <div class="col">
-                <h4>Date: ${cardDetail.date}</h4>
-            </div>
-            
-            <div class="col">
-                <h5>${cardDetail.description}</h5>
+            <div class="col-lg-4 detailCol">
+                <div>
+                    <h4>${cardDetail.name}</h4>
+                </div>
+                <div>
+                    <h5>Date: ${cardDetail.date}</h5>
+                </div>
+                <div>
+                    <h6>${cardDetail.description}</h6>
+                </div>
             </div>
         </div>
     </div>
-    `
+    `                
     container.appendChild(div)
 }
 
