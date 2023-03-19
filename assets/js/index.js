@@ -1,13 +1,37 @@
-import data from './data.js'
+/*some dark magic*/
+let data=""
+let uniqueCategories=""
+
+/*jason connection and function calls*/
+
+async function getData() {
+    try {
+        let apiUrl = './assets/js/amazing.json'
+        let response = await fetch(apiUrl);
+        data = await response.json();
+        createCategories(data)
+        buildCard(data.events, eventCard);
+        buildCheckBox(uniqueCategories, checkBox);
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
+getData()
 
 /*map and reduce array of categories*/
-const categories = data.events.map((product) => product.category);
-const uniqueCategories = categories.reduce((acc, category) => {
-  if (!acc.includes(category)) {
-    acc.push(category);
-  }
-  return acc;
-}, []);
+function createCategories(data){
+    const categories = data.events.map((product) => product.category);
+    uniqueCategories = categories.reduce((acc, category) => {
+    if (!acc.includes(category)) {
+        acc.push(category);
+    }
+    return acc;
+    }, []);
+    return uniqueCategories;
+}
+
+
 
 /*print checkboxes based on reduced category array*/
 let checkBox = document.getElementById("generatedCheckBox");
@@ -23,10 +47,7 @@ function buildCheckBox(checkBoxArray, container) {
     container.appendChild(checkBoxfragment);
 }
 
-buildCheckBox(uniqueCategories, checkBox)
-
-
-/*print event cards from data.js*/
+/*print event cards from data*/
 let eventCard = document.getElementById("cardContainer");
 const fragment = document.createDocumentFragment();
 function buildCard(eventsArray, container) {
@@ -46,13 +67,14 @@ function buildCard(eventsArray, container) {
     container.appendChild(fragment);
 }
 
-buildCard(data.events, eventCard)
+
 
 
 /*search by checkbox*/
 const filterCheck = (array) => {
     let checked = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'));
     let reChecked = checked.map(e => e.id.toLowerCase())
+    console.log(array)
     let filterChecks = array.filter(data => reChecked.includes(data.category.toLowerCase()))
     console.log(filterChecks);
     if (filterChecks.length > 0) {
@@ -61,6 +83,11 @@ const filterCheck = (array) => {
         return array
     }
 }
+
+
+
+
+
 /*search by text filter*/
 const $search = document.getElementById("searchBox");
 const filterSearch = (array, value) => {
