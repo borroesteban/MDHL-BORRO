@@ -330,12 +330,16 @@ h3{
 }
 
 /*stats table*/
+.tableContainer{
+    display:flex;
+}
 .statTable{
     display: flex;
     justify-content: center;
     align-self:center;
     margin-top:3rem;
     width:80%;
+    flex-direction: column;
 }
 
 tr,td{
@@ -353,6 +357,10 @@ tr,td{
 table,th,td,tr{
     border:1px solid black;
     padding:.5rem;
+}
+
+.tableSmall{
+    margin-left:30%;
 }
 
 /*footer styling*/

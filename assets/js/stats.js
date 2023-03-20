@@ -1,26 +1,28 @@
+/*some dark magic*/
 let categories = [];
 
-let eventsarray = [];
+let arrayOfEvents = [];
 
 let currentDate;
 
-let table = document.getElementById("tbody1");
+let table = document.getElementById("firstTable");
 let data = ""
 
+/*retrieve data and various functions*/
 async function getData() {
     try {
         let apiUrl = '/assets/js/amazing.json'
         let response = await fetch(apiUrl);
         data = await response.json();
-        eventsarray = data.events;
+        arrayOfEvents = data.events;
         currentDate = data.currentDate;
-        categories = createCategories(eventsarray);
-        let maxAttendanceEvent = eventsarray.sort((a, b) => ((b.assistance) / (b.capacity)) - ((a.assistance) / (a.capacity)))[0];
-        let minAttendanceEvent = eventsarray.sort((a, b) => ((a.assistance) / (a.capacity)) - ((b.assistance) / (b.capacity)))[0];
-        let capacityEvent = maxCapacityEvent(eventsarray);
-        addFile(maxAttendanceEvent.name, minAttendanceEvent.name, capacityEvent.name, table);
-        createCategoryTable(eventsarray, categories, currentDate)
-        createCategoryTable2(eventsarray, categories, currentDate)
+        categories = createCategories(arrayOfEvents);
+        let maxAttendanceEvent = arrayOfEvents.sort((a, b) => ((b.assistance) / (b.capacity)) - ((a.assistance) / (a.capacity)))[0];
+        let minAttendanceEvent = arrayOfEvents.sort((a, b) => ((a.assistance) / (a.capacity)) - ((b.assistance) / (b.capacity)))[0];
+        let capacityEvent = maxCapacityEvent(arrayOfEvents);
+        addRow(maxAttendanceEvent.name, minAttendanceEvent.name, capacityEvent.name, table);
+        buildTable2(arrayOfEvents, categories, currentDate)
+        buildTable3(arrayOfEvents, categories, currentDate)
 
     }
     catch (error) {
@@ -28,45 +30,47 @@ async function getData() {
     }
 }
 getData()
-/* Necesario para que funcione Get Data */
+
+
+/* this function creates the categories */
 const createCategories = (data) => {
     let categories = data.map(category => category.category)
-    let categoriesUnrepeat = [...(new Set(categories))]
-    return categoriesUnrepeat
+    let uniqueCategories = [...(new Set(categories))]
+    return uniqueCategories
 }
 
-/* FUNCION DE ORDENAMIENTO */
+/* this function sorts the events an return the first in the list */
 
 function maxCapacityEvent(events) {
     let capacityEvent = events.sort((a, b) => b.capacity - a.capacity);
     return capacityEvent[0];
 }
 
-/*AGREGAR FILA */
+/* this function adds new rows */
 
-function addFile(para1, para2, para3, container) {
+function addRow(feedData1, feedData2, feedData3, container) {
     let newRow = document.createElement("tr");
-    let celdaColA = document.createElement("td");
-    let celdaColB = document.createElement("td");
-    let celdaColC = document.createElement("td");
+    let cellOne = document.createElement("td");
+    let cellTwo = document.createElement("td");
+    let cellThree = document.createElement("td");
 
-    celdaColA.textContent = `${para1}`;
-    celdaColB.textContent = `${para2}`;
-    celdaColC.textContent = `${para3}`;
+    cellOne.textContent = `${feedData1}`; //textContent: ancient magic to set text content for the HTML element
+    cellTwo.textContent = `${feedData2}`;
+    cellThree.textContent = `${feedData3}`;
 
-    newRow.appendChild(celdaColA);
-    newRow.appendChild(celdaColB);
-    newRow.appendChild(celdaColC);
+    newRow.appendChild(cellOne);
+    newRow.appendChild(cellTwo);
+    newRow.appendChild(cellThree);
     container.appendChild(newRow);
 }
 
 
-/* TABLA NUMERO 2 */
+/* this function builds second table */
 
-function createCategoryTable(eventsarray, categories, currentDate) {
-    let secondTable = document.getElementById("tbody2");
+function buildTable2(arrayOfEvents, categories, currentDate) {
+    let secondTable = document.getElementById("secondTable");
     categories.forEach(category => {
-        let filteredEvents = eventsarray.filter((event) => event.category === category).filter((event) => event.date < currentDate)
+        let filteredEvents = arrayOfEvents.filter((event) => event.category === category).filter((event) => event.date < currentDate)
         let eventsRevenueEstimate = 0;
         let eventPerCategory = 0;
         for (let i = 0; i < filteredEvents.length; i++) {
@@ -85,17 +89,17 @@ function createCategoryTable(eventsarray, categories, currentDate) {
             revenue: `$${eventsRevenueEstimate}`,
             attendance: `${eventsPercentageAtt.toFixed(2)}%`,  
         }
-        addFile(newObject.name, newObject.revenue, newObject.attendance, secondTable);
+        addRow(newObject.name, newObject.revenue, newObject.attendance, secondTable);
     })
 
 }
 
-/*TERCER TABLA */
+/* this function builds third table */
 
-function createCategoryTable2(eventsarray, categories, currentDate) {
-    let thirdTable = document.getElementById("tbody3");
+function buildTable3(arrayOfEvents, categories, currentDate) {
+    let thirdTable = document.getElementById("thirdTable");
     categories.forEach(category => {
-        let filteredEvents = eventsarray.filter((event) => event.category === category).filter((event) => event.date > currentDate)
+        let filteredEvents = arrayOfEvents.filter((event) => event.category === category).filter((event) => event.date > currentDate)
         let eventsRevenueEstimate = 0;
         let eventPerCategory = 0;
         for (let i = 0; i < filteredEvents.length; i++) {
@@ -114,7 +118,7 @@ function createCategoryTable2(eventsarray, categories, currentDate) {
             revenue: `$${eventsRevenueEstimate}`,
             attendance: `${eventsPercentageAtt.toFixed(2)}%`,  
         }
-        addFile(newObject.name, newObject.revenue, newObject.attendance, thirdTable);
+        addRow(newObject.name, newObject.revenue, newObject.attendance, thirdTable);
     })
 }
 

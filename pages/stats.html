@@ -42,83 +42,59 @@
             </div> 
         </header>
     <main>
-        <section class="statTable">
-            <table>
-                    <tr>
-                        <th colspan="3" class="tableHeader">Events statistics</th>
-                    </tr>
-                    <tr>
-                        <th colspan="3" id="tbody1">Events with the highest of attendance</th>
-                    </tr>
-                        <th colspan="3" id="tbody2">Events with the lowest percentage of attendance</th>
-                        
-                    </tr>
-                    <tr>
-                        <th colspan="3" id="tbody3">Events with larger capacity</th>
- 
-                    </tr>
-                    <tr>
-                        <th colspan="3" class="tableHeader">Upcoming events statistics by category</th>
-                    </tr>
-                    <tr>
-                        <th>Categories</th>
-                        <th>Revenues</th>
-                        <th>Percentage of attendance</th>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th colspan="3" class="tableHeader">Past events statistics by category</th>
-                    </tr>
-                    <tr>
-                        <th>Categories</th>
-                        <th>Revenues</th>
-                        <th>Percentage of attendance</th>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-            </table>
-        </section>
-        <section class="tbody1" >
-            <div ></div>
-            <div ></div>
-            <div ></div>
+        <section class="tableContainer">
+            <!-- first part of the table -->
+            <div class="container statTable">
+                <div class="table table-bordered table-fixed table-striped text-center ">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="5" class="tableHeader">EVENT STATISTICS</th>
+                            </tr>
+                            <tr class="longtitle">
+                                <th>Event with the highest percentage of attendance</th>
+                                <th>Event with the lowest percentage of attendance</th>
+                                <th>Event with larger capacity</th>
+                            </tr>
+                        </thead>
+                        <tbody id="firstTable"></tbody>
+                    </table>
+                </div>
+
+            <!-- second part of the table -->
+                <div class="table table-bordered table-fixed text-center tableSmall">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="5" class="tableHeader">UPCOMING EVENTS STATISTICS BY CATEGORY</th>
+                            </tr>
+                            <tr>
+                                <th>Categories</th>
+                                <th>Revenues</th>
+                                <th>Percentage of attendance</th>
+                            </tr>
+                        </thead>
+                        <tbody id="secondTable"></tbody>
+                    </table>
+                </div>
+
+            <!-- third part of the table -->
+                <div class="table table-bordered table-fixed text-center tableSmall">            
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="5" class="tableHeader">PAST EVENTS STATISTICS BY CATEGORY</th>
+                            </tr>
+                            <tr>
+                                <th>Categories</th>
+                                <th>Revenues</th>
+                                <th>Percentage of attendance</th>
+                            </tr>
+                        </thead>
+                        <tbody id="thirdTable"></tbody>
+                    </table>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="mt-auto">
