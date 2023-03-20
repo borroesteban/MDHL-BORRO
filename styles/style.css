@@ -178,7 +178,6 @@ h3{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
 }
 
 .checkFilter{
@@ -194,21 +193,18 @@ h3{
 
 .generatedCheckBox{
     display: flex;
-    width:10rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
     align-items: center;
-    align-content:center;
     justify-items:center;
     justify-content: center;
+    align-content:center;
     flex-wrap: nowrap;
-    text-align:center;
-    
 }
 
 .form-check-input{
     margin-right:1rem;
     margin-left:1rem;
-    min-width: 1rem;
-    max-width: 1rem;
     box-shadow: 3px 3px 4px 1px rgba(0,0,0,0.5);
 }
 
@@ -402,45 +398,63 @@ footer{
 }
 
 
-.detailRow{
+.detailContainer{
     display:flex;
-}
+    flex-direction:row;
 
-.detailCol{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
+    justify-content:center;
+    align-content:center;
     
+    
+    
+
 }
 
-
-.detailIMG{
-    object-fit:contain;
-    padding:1rem;
-    margin-right:2rem;
+.detailRow{
+    
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    height:auto;
-    width:100%;
+    flex-direction: row;
+    background:whitesmoke;
+    height:33rem;
+    width:55rem;
     margin-top:5rem;
-    margin-bottom:2rem;
-    box-shadow: 4px 3px 10px 3px rgba(0,0,0,0.5);
+    box-shadow: -4px -3px 10px 3px rgba(0,0,0,0.5);
 }
 
-.col-lg-4{
-    display:flex;
-    flex-direction: column;
-    align-items: flex-start;
+.detailLeftColumn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height:30rem;
+    width:25rem;
+    background:whitesmoke;
+    box-shadow: -4px -3px 10px 3px rgba(0,0,0,0.5);
+}
+
+.detailRightColumn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height:30rem;
+    width:25rem;
+    background:whitesmoke;
+    box-shadow: -4px -3px 10px 3px rgba(0,0,0,0.5);
+}
+
+.detailLeftColumn>img{
+    object-fit:cover;
+    height:100%;
+    width:100%;
+    padding:1rem;
     
-}
-
-.detailContainer{
-    display:flex;
-    margin-top:7%;
+    
 }
 
 
