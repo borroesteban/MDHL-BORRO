@@ -355,12 +355,22 @@ tr,td{
 }
 
 table,th,td,tr{
+    text-align:center;
     border:1px solid black;
     padding:.5rem;
+    
 }
 
 .tableSmall{
-    margin-left:30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.tableLarge{
+    
+    text-align:center;
+    display:flex;
+    
 }
 
 /*footer styling*/
