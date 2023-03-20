@@ -1,0 +1,471 @@
+/* ## general style normalization ## */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;  
+    display: flex;  
+    flex-direction: column;
+    
+}
+
+main{
+    box-sizing: border-box;
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ## navbar ## */
+.amazingLogo{
+    width:100px;
+    
+}
+
+.navAmazingLogo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-left:2rem;
+    z-index: 1;
+
+}
+
+.navbar{
+    display:flex;
+    min-height:4rem;
+    padding-right:3rem;
+    padding-bottom:13px;
+    flex-wrap:nowrap;
+    align-items: center;
+    animation-name:navControlBackground;
+    animation-duration:20s;
+    animation-iteration-count: infinite;
+
+}
+
+.navLinks{
+    display:flex;
+    justify-content:end;
+    
+}
+
+.homeLogo{
+    display:flex;
+    width:20px;
+    height:20px;
+}
+
+.homeLogoCurrent{
+    display:flex;
+    width:20px;
+    height:20px;
+    border-bottom: 1px solid black;
+}
+
+.navAnchor{
+    margin-right:1rem;
+    
+    text-decoration:none;
+    color:black;
+    transition:transform .2s linear;
+}
+
+.navAnchor:hover{
+    transform:scale(1.1,1.1);
+}
+
+/* ## carousel ## */
+
+
+.navControlsContainer{
+    padding:1rem;
+    height:4rem;
+    animation-name:navControlBackground;
+    animation-duration:20s;
+    animation-iteration-count: infinite;
+}
+
+.nameContainer{
+    display:flex;
+}
+
+@keyframes navControlBackground{
+    5%{background-color:white;}
+    10%{background-color:aliceblue;}
+    15%{background-color:rgb(236, 230, 250);}
+    30%{background-color:rgb(203, 202, 238);}
+    40%{background-color:rgb(173, 174, 236);}
+    50%{background-color:rgb(160, 172, 238);}
+    60%{background-color:rgb(137, 163, 235);}
+    70%{background-color:rgb(160, 172, 238);}
+    75%{background-color:rgb(173, 174, 236);}
+    80%{background-color:rgb(203, 202, 238);}
+    90%{background-color:rgb(236, 230, 250);}
+    95%{background-color:aliceblue;}
+    100%{background-color:white;}
+    
+}
+
+.navControl{
+    width:30px;
+    background:none;
+    border-style:none;
+}
+
+.pageName{
+    display:flex;
+    justify-content: center;
+}
+
+h3{
+    animation-name:h3Animation;
+    animation-duration:20s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes h3Animation{
+    0%{text-shadow: 20px 4px 3px rgba(28,110,164,0.68);}
+    50%{text-shadow: -20px 4px 3px rgba(28,110,164,0.68);}
+    100%{text-shadow: 20px 4px 3px rgba(28,110,164,0.68);}
+}
+
+.currentPage{
+    font-weight:1000;
+    text-decoration:underline;
+}
+
+.row{
+    align-items:center;
+    
+}
+
+.buttonRight{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.buttonLeft{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+}
+
+/*filter styling*/
+
+.hvr-fade{
+    transition:background-color .2s linear;
+    border-radius:20px;
+    font-size:10px;
+    margin-top:4px;
+}
+
+.hvr-fade:hover{
+    background-color: #2098D1;
+    color: white;
+}
+
+
+.filters{
+    margin-top:2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkFilter{
+    display: flex;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    align-items: center;
+    justify-items:center;
+    justify-content: center;
+    align-content:center;
+    flex-wrap: nowrap;
+}
+
+.generatedCheckBox{
+    display: flex;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    align-items: center;
+    justify-items:center;
+    justify-content: center;
+    align-content:center;
+    flex-wrap: nowrap;
+}
+
+.form-check-input{
+    margin-right:1rem;
+    margin-left:1rem;
+    box-shadow: 3px 3px 4px 1px rgba(0,0,0,0.5);
+}
+
+.searchLogo{
+    width:1rem;
+}
+
+.searchButton{
+    border-style:none;
+    background:none;
+    margin-left:5px;
+}
+
+.searchForm{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.searchInput{
+    width:30rem;
+    transition:box-shadow .2s linear;
+}
+
+.searchInput:hover{
+    box-shadow: .5px .2px .2px .5px rgba(0,0,0,0.5);
+    
+
+}
+
+/*cards*/
+.cardstyle{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+}
+
+.cardstyle2{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    
+}
+
+.productCards{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    
+}
+.card{
+    margin:.5rem;
+    height:25rem;
+    width:16rem;
+    transition:transform .2s linear;
+    
+}
+.card:hover{
+    transform:scale(1.1,1.1)
+}
+
+.imageContainer{
+    overflow:hidden
+}
+.card-img-top {
+    object-fit:cover;
+    min-height: 10rem;
+    max-height:10rem;
+    padding-top:1rem;
+}
+
+.cardBottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    
+}
+
+.btn,btn-primary{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    text-align: center;
+    justify-content: space-around;
+}
+
+/*contact form*/
+.formContainer{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top:3rem;
+}
+.contactForm{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: start;
+}
+
+.contactForm>legend{
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+
+.messageBox{
+    height:5rem;
+}
+
+.formSubmit{
+    margin-top:1rem;
+    padding:3px;
+}
+
+/*stats table*/
+.tableContainer{
+    display:flex;
+}
+.statTable{
+    display: flex;
+    justify-content: center;
+    align-self:center;
+    margin-top:3rem;
+    width:80%;
+    flex-direction: column;
+}
+
+tr,td{
+    padding:1rem;
+    height:2rem;
+    
+}
+
+.tableHeader{
+    animation-name:navControlBackground;
+    animation-duration:20s;
+    animation-iteration-count: infinite;
+}
+
+table,th,td,tr{
+    border:1px solid black;
+    padding:.5rem;
+}
+
+.tableSmall{
+    margin-left:30%;
+}
+
+/*footer styling*/
+footer{    
+    display: inline-flex;
+    align-content:flex-end;
+    align-items:center;
+    height:2rem;
+    animation-name:navControlBackground;
+    animation-duration:20s;
+    animation-iteration-count: infinite;
+    
+}
+
+.socialMedia{
+    height:2rem;
+    background:none;
+    border-style:none;
+    flex-wrap:nowrap;
+    animation-name:navControlBackground;
+    animation-duration:20s;
+    animation-iteration-count: infinite;
+}
+
+.cohortName{
+    display: flex;
+    justify-content: flex-end;
+    padding-right:2rem;
+    height:2rem;
+    animation-name:navControlBackground;
+    animation-duration:20s;
+    animation-iteration-count: infinite;
+
+}
+
+.mediaLinks{
+    display:flex;
+    flex-wrap:nowrap;
+    animation-name:navControlBackground;
+    animation-duration:20s;
+    animation-iteration-count: infinite;
+
+}
+
+
+.detailContainer{
+    display:flex;
+    flex-direction:row;
+
+    justify-content:center;
+    align-content:center;
+    
+    
+    
+
+}
+
+.detailRow{
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background:whitesmoke;
+    height:33rem;
+    width:55rem;
+    margin-top:5rem;
+    box-shadow: -4px -3px 10px 3px rgba(0,0,0,0.5);
+}
+
+.detailLeftColumn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height:30rem;
+    width:25rem;
+    background:whitesmoke;
+    box-shadow: -4px -3px 10px 3px rgba(0,0,0,0.5);
+}
+
+.detailRightColumn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height:30rem;
+    width:25rem;
+    background:whitesmoke;
+    box-shadow: -4px -3px 10px 3px rgba(0,0,0,0.5);
+}
+
+.detailLeftColumn>img{
+    object-fit:cover;
+    height:100%;
+    width:100%;
+    padding:1rem;
+    
+    
+}
+
+
+
+
+
