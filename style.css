@@ -153,8 +153,6 @@ div>img{
 
 }
 
-
-/*prueba de boton*/
 .button {
     display: inline-block;
     padding: 12px 24px;
@@ -215,8 +213,7 @@ div>img{
     transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
    }
 
-
-   /*prueba con fondo animado*/
+   /*fondo animado*/
    body {
 	background: linear-gradient(-55deg, #494949,#faf600, #4f7055, #faf600);
 	background-size: 500% 500%;
@@ -246,4 +243,12 @@ div>img{
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+.regForm{
+    display:flex;
+    position:absolute;
+    left:20%;
+    flex-direction:column;
+    
 }
